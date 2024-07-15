@@ -30,7 +30,7 @@
   --heading-color: #456D9A;
 
   /* Accent Color - This is the main accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out. */
-  --accent-color: #E2464B;
+  --accent-color: #f8ad20;
 
   /* Contrast Color - This is a color used for text when the background color is one of the heading, accent, or default colors. Its purpose is to ensure proper contrast and readability when placed over these more dominant colors. */
   --contrast-color: #312f2f;
@@ -71,6 +71,12 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+img{ max-width: 100%;}
+@media screen and (min-width: 1200px) {
+  .container{
+    max-width:70vw;
+  }
+}
 body {
   color: var(--default-color);
   background-color: var(--background-color);
@@ -802,7 +808,7 @@ section,
 }
 
 .section-title p {
-  color: var(--heading-color);
+  color: var(--hero-button-text-color);
   margin: 0;
   font-size: 36px;
   font-weight: 700;
@@ -943,18 +949,17 @@ section,
 }
 
 @media (max-width: 768px) {
-  .hero h2 {
-    font-size: 40px;
-  }
 
-  .hero p {
-    font-size: 18px;
-  }
 }
 
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
+.about {
+  background: url('foTT-13.png') no-repeat center center/cover;
+  padding: 20px 0;
+  color: #FFFFFF;
+}
 
 .about .content h3 {
   font-size: 1.75rem;
@@ -962,14 +967,7 @@ section,
   color: #FFFFFF;
 }
 
-.about {
-  background: url('file:///C:/Users/User/Downloads/dise%C3%B1o%203/Gp/assets/css/FOTOS%20UT-13.png') no-repeat center center/cover;
-  padding: 20px 0;
-  color: #FFFFFF;
-}
-.about .content .fst- {
-  color: color-mix(in srgb, var(--default-color), var(--contrast-color) 50%);
-}
+
 
 .about .content ul {
   list-style: none;
@@ -992,9 +990,28 @@ section,
   margin-bottom: 0;
 }
 
+.cta-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #FFFFFF;
+  background-color: #F8AD20;
+  border-radius: 0px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.cta-btn:hover {
+  background-color: #F8AD20;
+}
+
+
 /*--------------------------------------------------------------
 # Clients Section
 --------------------------------------------------------------*/
+#clients{ display: none;}
 .clients .swiper-slide img {
   opacity: 0.5;
   transition: 0.3s;
@@ -1046,7 +1063,7 @@ section,
 
 .features .features-item h4 {
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 700;
   margin: 0 0 5px 0;
 }
 
@@ -1106,7 +1123,7 @@ section,
 # Services Section
 --------------------------------------------------------------*/
 #services {
-  background: url('file:///C:/Users/User/Downloads/dise%C3%B1o%203/Gp/assets/css/FOTOS%20UT-13.png') no-repeat center center/cover;
+  background: url('foTT-13%20-%20copia.png') no-repeat center center/cover;
   padding: 20px 0;
 }
 
@@ -1120,8 +1137,7 @@ section,
   color: #2A4767; /* Color del texto */
 }
 
-#services .service-item .icon {
-  background: var(--accent-color);
+.service-item .icon {  
   color: var(--contrast-color);
   margin: 0 auto;
   width: 64px;
@@ -1132,6 +1148,11 @@ section,
   justify-content: center;
   margin-bottom: 20px;
   transition: 0.3s;
+}
+
+.service-item .icon img{
+  width:auto;
+  height:64px;
 }
 
 #services .service-item .icon i {
@@ -1150,7 +1171,7 @@ section,
 #services .service-item p {
   line-height: 24px;
   font-size: 14px;
-  margin-bottom: 0;
+  margin-bottom: 20px; /* Añadir margen inferior para el botón */
   color: #2A4767; /* Color del texto */
 }
 
@@ -1158,6 +1179,21 @@ section,
   box-shadow: 0px 0 25px 0 color-mix(in srgb, var(--default-color), transparent 92%);
   transform: translateY(-10px);
   color: #A7D1DF;
+}
+
+.cta-bt {
+  display: inline-block;
+  background-color: var(--hero-button-bg-color);
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: 400;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+.cta-bt:hover {
+  background-color: var(--hero-button-hover-bg-color);
 }
 
 #services .services-list a {
@@ -1238,7 +1274,6 @@ section,
 #services .help-box a {
   color: var(--contrast-color);
 }
-
 
 /*--------------------------------------------------------------
 # Call To Action Section
@@ -1451,6 +1486,7 @@ section,
   font-size: 14px;
 }
 
+
 /*--------------------------------------------------------------
 # Testimonials Section
 --------------------------------------------------------------*/
@@ -1464,7 +1500,7 @@ section,
 
 .testimonials:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 30%);
+  background: color-mix(in srgb, var(--background-color), transparent 70%);
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -1503,7 +1539,7 @@ section,
 
 .testimonials .testimonial-item h3 {
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 400;
   margin: 10px 0 5px 0;
 }
 
@@ -1960,7 +1996,7 @@ section,
 # Service Details 2
 --------------------------------------------------------------*/
 #service-details-2 {
-  background: url('file:///C:/Users/User/Downloads/dise%C3%B1o%203/Gp/assets/css/FOTOS%20UT-04.png') no-repeat center center/cover;
+  background: url('foT-04.png') no-repeat center center/cover;
   padding: 20px 0;
 }
 
@@ -1979,27 +2015,13 @@ section,
   margin-top: 30px;
 }
 
-#service-details-2 .service-item .icon {
-  background: var(--accent-color);
-  color: var(--contrast-color);
-  margin: 0 auto;
-  width: 64px;
-  height: 64px;
-  border-radius: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-  transition: 0.3s;
-}
-
 #service-details-2 .service-item .icon i {
   font-size: 28px;
   transition: ease-in-out 0.3s;
 }
 
 #service-details-2 .service-item h3 {
-  font-weight: 700;
+  font-weight: 400;
   margin: 10px 0 15px 0;
   font-size: 22px;
   transition: 0.3s;
@@ -2105,4 +2127,227 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+}
+
+#hero-2 {
+  background: url('FOTS%20WEB%20ULT-14.png') center center/cover no-repeat;
+  color: #fff;
+  padding: 100px 0;
+  text-align: left; /* Alineación del texto a la izquierda */
+}
+
+#hero-2 h1 {
+ 
+  margin-bottom: 20px;
+  text-align: left; /* Asegurar que el título esté alineado a la izquierda */
+  font-weight: 700;
+  color: #2A4767;
+}
+
+#hero-2 p {
+  
+  margin-bottom: 30px;
+  text-align: left; /* Asegurar que el párrafo esté alineado a la izquierda */
+  color: #2A4767;
+}
+
+.btn-get-started {
+  font-size: 1rem;
+  padding: 10px 30px;
+  background-color: #F8AD20;
+  color: #fff;
+  border: none;
+  border-radius: 0px;
+  transition: all 0.3s ease-in-out;
+  text-align: left; /* Alineación del botón a la izquierda */
+}
+
+.btn-get-started:hover {
+  background-color: #218838;
+}
+
+/*--------------------------------------------------------------
+# Service Details Section
+--------------------------------------------------------------*/
+#servicioesp .service-box {
+  padding: 20px;
+  box-shadow: 0px 2px 20px color-mix(in srgb, var(--default-color), transparent 88%);
+}
+
+#servicioesp .service-box + .service-box {
+  margin-top: 30px;
+}
+
+#servicioesp .service-box h4 {
+  font-size: 20px;
+  font-weight: 700;
+  border-bottom: 2px solid color-mix(in srgb, var(--default-color), transparent 92%);
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  color:#df1529
+}
+
+#servicioesp .services-list a {
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  background-color: color-mix(in srgb, var(--default-color), transparent 96%);
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  margin-top: 15px;
+  transition: 0.3s;
+}
+
+#servicioesp .services-list a:first-child {
+  margin-top: 0;
+}
+
+#servicioesp .services-list a i {
+  font-size: 16px;
+  margin-right: 8px;
+  color: #E2464B
+}
+
+#servicioesp .services-list a.active {
+  color: var(--background-color);
+  background-color: #df1529
+}
+
+#servicioesp .services-list a.active i {
+  color: var(--contrast-color);
+}
+
+#servicioesp .services-list a:hover {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 95%);
+  color: var(--accent-color);
+}
+
+#servicioesp .download-catalog a {
+  color: var(--default-color);
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  transition: 0.3s;
+  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+}
+
+#servicioesp .download-catalog a:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+#servicioesp .download-catalog a:last-child {
+  padding-bottom: 0;
+}
+
+#servicioesp .download-catalog a i {
+  font-size: 24px;
+  margin-right: 8px;
+  color: var(--accent-color);
+}
+
+#servicioesp .download-catalog a:hover {
+  color: var(--accent-color);
+}
+
+#servicioesp .help-box {
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+  margin-top: 30px;
+  padding: 30px 15px;
+}
+
+#servicioesp .help-box .help-icon {
+  font-size: 48px;
+}
+
+#servicioesp .help-box h4,
+#servicioesp .help-box a {
+  color: var(--contrast-color);
+}
+
+#servicioesp .services-img {
+  margin-bottom: 20px;
+}
+
+#servicioesp h3 {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+#servicioesp p {
+  font-size: 15px;
+}
+
+#servicioesp ul {
+  list-style: none;
+  padding: 0;
+  font-size: 15px;
+}
+
+#servicioesp ul li {
+  padding: 5px 0;
+  display: flex;
+  align-items: center;
+}
+
+#servicioesp ul i {
+  font-size: 20px;
+  margin-right: 8px;
+  color: var(--accent-color);
+}
+
+/*--------------------------------------------------------------
+# Global Page Titles & Breadcrumbs
+--------------------------------------------------------------*/
+.page-title {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  position: relative;
+  padding-top: 30px;
+  font-family: var(--heading-font);
+}
+
+.page-title .heading {
+  padding: 80px 0;
+  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+
+}
+
+.page-title .heading h1 {
+  font-size: 32px;
+  font-weight: 700;
+  font-family: var(--heading-font);
+}
+
+.page-title nav {
+  background-color: color-mix(in srgb, var(--default-color), transparent 95%);
+  padding: 20px 0;
+}
+
+.page-title nav ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.page-title nav ol li+li {
+  padding-left: 10px;
+}
+
+.page-title nav ol li+li::before {
+  content: "/";
+  display: inline-block;
+  padding-right: 10px;
+  color: color-mix(in srgb, var(--default-color), transparent 70%);
+}
+
+
+
+
+#logitos{
+  background-color: #A7D1DF;
 }
